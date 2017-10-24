@@ -1,9 +1,9 @@
 <?php get_header( ) ; ?>
 
 <?php if ( have_posts( ) ) :
-   while ( have_posts( ) ) : the_post ();   ?>
-   <?php get_template_part( 'content', get_post_format() ); ?>
-
+   while ( have_posts( ) ) : the_post (); ?>
+      <p> <?php the_content(); ?></p>
+      <h1> <?php the_title( );?> </h1>
   <?php endwhile;
  endif; ?>
 <h1>This is my Index....</h1>
